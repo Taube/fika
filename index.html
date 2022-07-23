@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fika | Lillskrot.se</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="cart-form" method="post">
+        <h1>Lillskrot</h1>
+        <div class="input-control">
+          <label name="name">Namn</label>
+          <input type="text" name="fullName" id="fullName" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label name="email">E-post</label>
+          <input type="text" name="email" id="email" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label name="phone">Telefon</label>
+          <input type="text" name="phone" id="phone" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <button type="submit">Skicka</button>
+        </div>
+      </form>
+
+      <div id="thanks" style="display: none">
+        <h1>Tack för din beställning!</h1>
+        <div class="input-control">
+          <button id="return">Tillbaka</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/submit-form.js" async defer></script>
+  </body>
+</html>
