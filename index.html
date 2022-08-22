@@ -1,45 +1,451 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Fika | Lillskrot.se</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/app.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinnisMuffins</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Great+Vibes"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script type="text/javascript" src="scripts/addToCart.js"></script>
+  
   </head>
   <body>
-    <div class="container">
-      <form id="cart-form" method="post">
-        <h1>Lillskrot</h1>
-        <div class="input-control">
-          <label name="name">Namn</label>
-          <input type="text" name="fullName" id="fullName" />
-          <div class="error"></div>
-        </div>
-        <div class="input-control">
-          <label name="email">E-post</label>
-          <input type="text" name="email" id="email" />
-          <div class="error"></div>
-        </div>
-        <div class="input-control">
-          <label name="phone">Telefon</label>
-          <input type="text" name="phone" id="phone" />
-          <div class="error"></div>
-        </div>
-        <div class="input-control">
-          <button type="submit">Skicka</button>
-        </div>
-      </form>
+    <!-- Header -->
+    <nav class="navbar">
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+      <ul>
+        <li>
+          <div class="inner-width">
 
-      <div id="thanks" style="display: none">
-        <h1>Tack för din beställning!</h1>
-        <div class="input-control">
-          <button id="return">Tillbaka</button>
+            <a href="#" class="logo">Muffins</a>
+
+            <div class="navbar-right">
+              <div class="navbar-menu">
+                <a href="#section1">Hem</a>
+                <a href="#section2">Meny</a>
+              </div>
+
+              <div class="cartIcon">
+                <button class="cartBackground" onclick="toggleCart()">
+                  <i class="material-icons">shopping_cart</i>
+                  <div id="cart-count"></div> 
+                  <div class="notificationDot" id="notificationDot">
+                    <i class="material-icons">circle</i>
+                  </div>
+                </button>
+              </div>
+          </div>
+
+            <div class="cart" id="cart">
+              <div class="title">Kundvagn</div><hr/>
+              <div id="shopping_cart"></div>
+              <button class="kassaButton"><h1>Gå till kassa</h1></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- First page -->
+    <div id="section1">
+      <div class="content1">
+        <div class="title">
+          <h1>Testa våra goda muffins!</h1>
+        </div>
+        <div class="image">
+          <img class="image" 
+          src="images/kladdkaka.png" 
+          alt="">
+        </div>
+      </div>
+      <div class="content2">
+        <div class="image">
+          <img class="image" 
+          src="images/cupcakesBackground.jpg" 
+          alt="">
+        </div>
+        <div class="title">
+          <p>Våra muffins går att beställa på Häckvägen 12 SaltsjöBoo</p>
+          <div class="popup">
+          <a href="#section2">Beställ</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="./scripts/submit-form.js" async defer></script>
+    <!-- Menu -->
+    <div id="section2">
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+
+      <div class="descriptionText">
+        <div class="popup">
+        <p>Vi tar, swish, klarna och kontant</p>
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="cards">
+        <div class="popup">
+          <div class="card" id="item1">
+            <img
+              class="card__image"
+              src="images/kladdkaka.webp"
+              alt=""
+            />
+            <div class="title">
+              <div class="invis">kladdkaka</div>
+            </div>
+            <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">20:-</div>
+              <h2>Kladdkaka</h2>
+              <p>Det finns: 9 kvar</p>
+              <br>
+              <p>
+                Innehåller: Smör, socker, kakao, vaniljsocker, ägg och vetemjöl.
+              </p>
+            </div>
+          
+              <div class="card__info">
+                <div><i class="material-icons">thumb_up</i>20</div>
+                  <button onclick="addToCart(item1)">Beställ</button>
+
+                <div>
+                  <a href="https://www.kokaihop.se/recept/klassisk-kladdkaka-2" target="new" class="card__link">Recept</a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="popup">
+        <div class="card" id="item2">
+          <img
+            class="card__image"
+            src="images/579599.webp"
+            alt=""
+          />
+          <div class="title">
+            <div class="invis">sockerkaka</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">15:-</div>
+            <h2>Sockerkaka</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>
+              Innehåller: Ägg, strösocker, vetemjöl, potatismjöl, bakpulver och
+              vaniljsocker.
+            </p>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>12</div>
+
+              <button onclick="addToCart(item2)">Beställ</button>
+
+            <div>
+              <a href="https://www.kokaihop.se/recept/latt-sockerkaka" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Card 3 -->
+        <div class="popup">
+        <div class="card" id="item3">
+          <img
+          class="card__image"
+          src="images/Chokladmuffins_foto-Andrea-Klintbjer_Mathem-360x360.jpg"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">chokladmuffin</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">15:-</div>
+            <h2>Chokladmuffin</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>
+              Innehåller: Smör, socker, kakao, vaniljsocker, ägg och vetemjöl.
+            </p>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>24</div>
+
+              <button onclick="addToCart(item3)">Beställ</button>
+
+            <div>
+              <a href="https://www.kokaihop.se/recept/klassisk-kladdkaka-2" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="popup">
+        <div class="card" id="item4">
+          <img
+          class="card__image"
+          src="images/muffins_grundrecept2_foto-andrea-klintbjer_mathem.jpeg"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">vaniljmuffin</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">15:-</div>
+            <h2>Vaniljmuffin</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>
+              Innehåller: Smör, ägg, strösocker, vetemjöl, bakpulver,
+              vaniljsocker och mjölk.
+            </p>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>15</div>
+
+              <button onclick="addToCart(item4)">Beställ</button>
+
+            <div>
+              <a href="https://www.mathem.se/recept/muffins-grundrecept" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="popup">
+        <div class="card" id="item5">
+          <img
+          class="card__image"
+          src="images/A_small_cup_of_coffee.JPG"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">bryggkaffe</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">5:-</div>
+            <h2>Bryggkaffe</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>Innehåller: Arvid Nordquist kaffepulver och mjölk.</p>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>8</div>
+
+              <button onclick="addToCart(item5)">Beställ</button>
+
+              
+            <div>
+              <a href="https://www.arvidnordquist.se/kaffe/sortiment/" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="popup">
+        <div class="card" id="item6">
+          <img
+          class="card__image"
+          src="images/8af1b129-efb9-4ff3-89bd-ff6e8031aba0.jpg"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">mjölk</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">5:-</div>
+            <h2>Mjölk</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>Innehåller: Mjölk</p>
+            <br>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>9</div>
+
+              <button onclick="addToCart(item6)">Beställ</button>
+
+              
+            <div>
+              <a href="https://www.arla.se/produkter/arla-ko/farsk-standardmjolk-30pct-1l-609682/" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="popup">
+        <div class="card" id="item7">
+          <img
+          class="card__image"
+          src="images/jordgubbssaft.jpg"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">jordgubbssaft</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">5:-</div>
+            <h2>Jordgubbssaft</h2>
+            <p>Det finns: 9 kvar</p>
+            <br />
+            <p>Innehåller: Jordgubbar</p>
+            <br>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>9</div>
+
+              <button onclick="addToCart(item7)">Beställ</button>
+
+              
+            <div>
+              <a href="https://www.bob.se/products/blandsaft-jordgubb/" target="new" class="card__link">Recept</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="popup">
+        <div class="card" id="item8">
+          <img
+          class="card__image"
+          src="images/water-pinkomelet.jpg"
+          alt=""
+        />
+          <div class="title">
+            <div class="invis">vatten</div>
+          </div>
+          <div class="card__content">
+              <div>
+                <label for="antal">Antal:</label>
+                <select name="antal" id="antal">
+                  <option id="1">1</option>
+                  <option id="2">2</option>
+                  <option id="3">3</option>
+                </select>
+              </div>
+              <div class="pris">0:-</div>
+            <h2>Vatten</h2>
+            <p>Det finns: ∞ kvar</p>
+            <br />
+            <p>Innehåller: Vatten</p>
+            <br>
+          </div>
+          <div class="card__info">
+            <div><i class="material-icons">thumb_up</i>7</div>
+                <button onclick="addToCart(item8)">Beställ</button>
+                
+                <div>
+                  <a href="https://www.google.com/search?q=vatten&tbm=isch&ved=2ahUKEwiDkfG1l7f4AhUGqIsKHZJ3D0EQ2-cCegQIABAA&oq=vatten&gs_lcp=CgNpbWcQAzIECCMQJzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIFCAAQgAQyBQgAEIAEMgQIABBDMgQIABBDMgQIABBDMgUIABCABDoGCAAQHhAHOgQIABAYOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BwgAELEDEEM6CggAELEDEIMBEENQoh9Y-iVgoyxoAHAAeACAAS6IAagCkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=WN2tYoOFMYbQrgSS772IBA&bih=961&biw=1920&rlz=1C1CHBF_svSE990SE990" target="new" class="card__link">Recept</a>
+                </div>
+          </div>
+        </div>
+        </div>
+
+        
+    </div>
+
+    <footer>
+      <div class="popup">
+      <div class="footer-content">
+        <h3>OM OSS</h3>
+        <p>Jag och min lillasyster, 12 och 9år har byggt en website där man kan köpa goda bullar och kakor, allt man behöver göra är att swisha så får man ett gmail när man ska komma och hur lång tid sin order kommer ta.</p>
+        <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnqGNMjkdkQmcSKtZmRMXggflDRvvpLKhxzlLRHqPhFDsvClQnXkjGvpDWhvvrfRrFwVKp"><i class="fa fa-google"></i></a></li>
+          <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>-->
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>Välkommen åter. Designad av <span>Leo 12 och Linnéa 9år.</span></p>
+      </div>
+      </div>
+    </footer>
+    <div id="overlay" onclick="closeCart()" style="display: none;"></div>
   </body>
 </html>

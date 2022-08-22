@@ -11,6 +11,7 @@ For learning:
 
 ## Run the site
 
+`npm install`
 `npm run start`
 
 ## Build the docker image
