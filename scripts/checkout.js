@@ -1,3 +1,29 @@
+var showCheckout = false;
+
+function toggleCheckout() {
+  showCheckout = !showCheckout;
+  populateCheckoutCart();
+  updateCheckoutDisplay();
+}
+
+function openCheckout() {
+  closeCart();
+  toggleCheckout();
+}
+
+function populateCheckoutCart() {
+  var cartHTML = document.getElementById("shopping_cart").innerHTML;
+  document.getElementById("checkout_shopping_cart").innerHTML = cartHTML;
+}
+
+function updateCheckoutDisplay() {
+  if (showCheckout) {
+    document.getElementById("checkout").style.display = "block";
+  } else {
+    document.getElementById("checkout").style.display = "none";
+  }
+}
+
 const form = document.getElementById("cart-form");
 const thanks = document.getElementById("thanks");
 let formPosted = false;
