@@ -63,8 +63,8 @@ app.post("/send", (req, res) => {
     text: text,
   };
 
-  var respon = sendMail(emailOptions, res);
-  return respon;
+  // var response = sendMail(emailOptions, res);
+  // return response;
 });
 
 // Set upp folders that serve static files

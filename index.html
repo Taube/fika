@@ -372,10 +372,7 @@
           </div>
           <div class="card__info">
             <div><i class="material-icons">thumb_up</i>9</div>
-
-              <button onclick="addToCart(item7)">Beställ</button>
-
-              
+            <button onclick="addToCart(item7)">Beställ</button>
             <div>
               <a href="https://www.bob.se/products/blandsaft-jordgubb/" target="new" class="card__link">Recept</a>
             </div>
@@ -442,7 +439,7 @@
     </footer>
 
     <div id="checkout" class="checkout-wrapper" style="display: none;">
-
+      
       <form method="post" id="cart-form" class="checkout">
         <h1>Beställning</h1>
         <div id="checkout_shopping_cart"></div>
@@ -462,9 +459,14 @@
           <div class="error"></div>
         </div>
         <div class="input-control">
+          <textarea name="order" id="order"></textarea>
+        </div>
+        <div class="input-control">
           <button type="submit">Skicka beställning</button>
         </div>
-        <p><a href="#" onclick="toggleCheckout()">Fortsätt handla</a></p>
+        <p>
+          <a href="#" onclick="toggleCheckout()">Fortsätt handla</a>
+        </p>
       </form>
 
       <div id="thanks" class="checkout" style="display: none">
