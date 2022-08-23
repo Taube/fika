@@ -3,6 +3,7 @@ var showCheckout = false;
 function toggleCheckout() {
   showCheckout = !showCheckout;
   populateCheckoutCart();
+  updateCheckoutCartText();
   updateCheckoutDisplay();
 }
 
@@ -22,6 +23,19 @@ function updateCheckoutDisplay() {
   } else {
     document.getElementById("checkout").style.display = "none";
   }
+}
+
+function updateCheckoutCartText() {
+  var orderTextarea = document.getElementById("order");
+  var checkoutCartText = "";
+  cart.forEach((product, index) => {
+    checkoutCartText += `${product.amount} st. ${product.title} á ${product.priceFormatted}\n`;
+  });
+
+  var total = cart.reduce((total, { sum }) => sum + total, 0);
+  checkoutCartText += `\nTotalt: ${total}:-`;
+
+  orderTextarea.value = checkoutCartText;
 }
 
 const form = document.getElementById("cart-form");
@@ -184,10 +198,4 @@ window.addEventListener("load", function () {
 
   phone.addEventListener("blur", () => validatePhone());
   phone.addEventListener("keyup", () => validatePhone());
-});
-
-const returnButton = document.getElementById("return");
-returnButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  setView("formReset");
 });

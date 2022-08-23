@@ -151,17 +151,25 @@ function closeCart() {
 }
 
 function updateCartDisplay() {
+  var cartElement = document.getElementById("cart");
+  if (!cartElement) {
+    return;
+  }
   if (showCart) {
-    document.getElementById("cart").style.display = "inline";
+    cartElement.style.display = "inline";
   } else {
-    document.getElementById("cart").style.display = "none";
+    cartElement.style.display = "none";
   }
 }
 
 function updateOverlayDisplay() {
+  var overlay = document.getElementById("overlay");
+  if (!overlay) {
+    return;
+  }
   if (showCart) {
-    document.getElementById("overlay").style.display = "block";
+    overlay.style.display = "block";
   } else {
-    document.getElementById("overlay").style.display = "none";
+    overlay.style.display = "none";
   }
 }
