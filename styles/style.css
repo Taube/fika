@@ -96,14 +96,85 @@ a {
   letter-spacing: 2px;
   display: inline-block;
 }
-@media screen and (max-width: 1024px) {
-  .navbar-menu a {
+
+.image {
+  background-image: url(images/cupcakesBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+}
+
+.content2 .image {
+  background-image: url(images/kladdkaka.png);
+  width: 100%;
+  height: 75%;
+}
+
+#section1 {
+  margin-top: 100px;
+  min-height: 780px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #222222;
+  background-color: #f8f2e7;
+  padding: 0 400px;
+}
+
+.title p {
+  margin-bottom: 0;
+  margin-top: 33px;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 1550px) {
+  #section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 108px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10px;
+  }
+
+  .image {
+    height: 65%;
+  }
+
+  .content2 .image {
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #section1 {
+    padding: 0 20px;
+  }
+  .descriptionText {
+    padding-left: 4%;
+    padding-top: 7%;
+    font-weight: bold;
+    font-size: 23px;
   }
 }
 
 @media screen and (max-width: 414px) {
   .inner-width {
     padding: 0px;
+  }
+
+  #section1 {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 }
 
@@ -112,50 +183,79 @@ a {
     padding: 10px;
     width: 126px;
   }
+
+  .image {
+    height: 100%;
+  }
+
+  .content2 .image {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .body {
+    padding: 10px;
+    max-width: 91%;
+  }
+
+  .content1,
+  .content2 {
+    padding-top: 10px;
+    padding-right: 0px;
+  }
+
+  .navbar-menu {
+    width: 165px;
+  }
+
+  .cartBackground {
+    margin-right: 0px;
+  }
+
+  .cartBackground button {
     padding: 0px;
-    max-width: 291;
   }
 
   .image {
-    max-width: 291px;
+    max-width: 100%;
   }
 
   .navbar-menu a {
-    padding-right: 100px;
     padding: 10px;
     width: 60px;
   }
 
   .cartIcon {
-    padding-right: 22%;
+    padding-right: 15%;
   }
 
   .navbar {
-    width: 330px;
+    max-width: 100%;
   }
 
   .footer-content p {
-    width: 291px;
+    max-width: 350px;
   }
 
   .footer-bottom p {
-    max-width: 291px;
+    max-width: 100%;
   }
 
   .cards {
-    width: 291px;
+    max-width: 100%;
   }
 
   .footer {
-    width: 291px;
+    max-width: 100%;
   }
 
   .footer-bottom {
-    width: 291px;
+    max-width: 100%;
+  }
+
+  .cards {
+    max-width: 100%;
   }
 }
 
@@ -175,6 +275,7 @@ a {
   flex-direction: column;
   padding-top: 170px;
   padding-bottom: 0px;
+  padding: 0 30px;
 }
 
 .title h1 {
@@ -185,42 +286,23 @@ a {
   letter-spacing: 3px;
   margin-bottom: 40px;
 }
-.image {
-  background-image: url(images/cupcakesBackground.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 80%;
-}
+
 .content2 {
   display: flex;
   flex-direction: column;
   padding-top: 170px;
   padding-left: 20px;
-}
-.content2 .image {
-  background-image: url(images/kladdkaka.png);
-  width: 100%;
-  height: 75%;
+  padding: 0 30px;
 }
 
 @media screen and (max-width: 1024px) {
   .content1,
   .content2 {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 0;
   }
 }
 
-.title p {
-  margin-bottom: 0;
-  margin-top: 33px;
-  font-size: 14px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 25px;
-}
 .content2 a {
   padding: 14px 27px;
   margin-top: 30px;
@@ -279,27 +361,7 @@ a {
   background-color: #de6900;
 }
 
-#section1 {
-  min-height: 780px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  color: #222222;
-  background-color: #f8f2e7;
-  padding: 0 430px;
-}
-
-@media screen and (max-width: 1024px) {
-  #section1 {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-  }
-}
-
 @media screen and (max-width: 550px) {
-  #section1 {
-    grid-template-columns: 1fr;
-    padding: 0 0px;
-  }
   .descriptionText {
     padding-left: 4%;
     padding-top: 7%;
@@ -575,7 +637,7 @@ footer {
 }
 
 .footer-content p {
-  max-width: 500px;
+  max-width: 350px;
   margin: 10px auto;
   line-height: 28px;
   font-size: 14px;
