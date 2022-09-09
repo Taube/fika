@@ -14,10 +14,16 @@ For learning:
 `npm install`
 `npm run start`
 
-## Build the docker image
+# DOCKER
 
-`docker build -t express .`
+## Build the container
 
-## Run the docker image
+> docker build -t getitdone/lillskrot-fika .
 
-`docker run -p 3000:3000 express`
+## Run the container
+
+> docker run -p 3002:3002 getitdone/lillskrot-fika
+
+## Push the conatiner
+
+> docker push getitdone/lillskrot-fika
