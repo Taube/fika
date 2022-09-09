@@ -47,24 +47,26 @@ app.get("/", (req, res) => {
 
 app.post("/send", (req, res) => {
   const body = req.body;
-  const { fullName, email, phone } = body;
+  const { fullName, email, phone, order } = body;
 
   const text = `
   Ny beställning från:
   Namn: ${fullName}
   E-post: ${email}
   Telefon: ${phone}
+  
+  ${order}
   `;
 
   const emailOptions = {
-    from: fromEmail,
+    from: email ?? fromEmail,
     to: toEmail,
     subject: `Ny beställning från ${fullName}`,
     text: text,
   };
 
-  // var response = sendMail(emailOptions, res);
-  // return response;
+  var response = sendMail(emailOptions, res);
+  return response;
 });
 
 // Set upp folders that serve static files

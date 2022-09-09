@@ -94,8 +94,16 @@ function sendData(form) {
     jsonPromise.then((res) => {
       message = res.message;
       setView("thanks");
+      clearCart();
     });
   });
+}
+
+function clearCart() {
+  cart = [];
+  document.getElementById("shopping_cart").innerHTML = "";
+  document.getElementById("checkout_shopping_cart").innerHTML = "";
+  document.getElementById("cart-count").innerHTML = "";
 }
 
 const validateFormInputs = () => {
