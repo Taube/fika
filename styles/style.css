@@ -118,7 +118,7 @@ a {
   grid-template-columns: 1fr 1fr;
   color: #222222;
   background-color: #f8f2e7;
-  padding: 0 400px;
+  padding: 0 108px;
 }
 
 .title p {
@@ -137,6 +137,14 @@ a {
     grid-template-columns: 1fr 1fr;
     padding: 0 108px;
   }
+
+  .image {
+    height: 65%;
+  }
+
+  .content2 .image {
+    height: 65%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -147,11 +155,11 @@ a {
   }
 
   .image {
-    height: 65%;
+    height: 55%;
   }
 
   .content2 .image {
-    height: 65%;
+    height: 55%;
   }
 }
 
@@ -164,6 +172,16 @@ a {
     padding-top: 7%;
     font-weight: bold;
     font-size: 23px;
+  }
+
+  .image {
+    height: 55%;
+  }
+
+  .content2 .image {
+    height: 55%;
+
+    width: 110%;
   }
 }
 
