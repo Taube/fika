@@ -9,6 +9,14 @@ For learning:
 - Vanilla Javascript
 - Docker / Synology NAS OS / Reverse Proxy
 
+## Check for ports
+
+netstat -ano | findstr :3002
+
+## Kill port
+
+npx kill-port 3002
+
 ## Run the site
 
 `npm install`
@@ -27,3 +35,15 @@ For learning:
 ## Push the conatiner
 
 > docker push getitdone/lillskrot-fika
+
+## Kill the container
+
+> docker kill getitdone/lillskrot-fika
+
+## List containers
+
+> docker container ls
+
+## Move a running container
+
+> docker rm -f <container-name>
