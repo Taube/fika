@@ -558,6 +558,10 @@ button:hover {
   width: 100%;
 }
 
+#order {
+  display: none;
+}
+
 .cartImg > img {
   width: 200px;
 }
