@@ -181,7 +181,7 @@ a {
   .content2 .image {
     height: 55%;
 
-    width: 110%;
+    width: 100%;
   }
 }
 
@@ -733,4 +733,22 @@ footer {
 .popup {
   position: relative;
   z-index: 3;
+}
+
+.stepNumbers {
+  color: #ef812c;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stepText {
+  display: inline-block;
+  color: #333333;
+  font-size: 18px;
+}
+
+.stepTextNext {
+  color: #333333;
+  font-size: 18px;
+  margin-left: 32px;
 }

@@ -82,7 +82,44 @@
           alt="">
         </div>
         <div class="title">
-          <p>Våra muffins går att beställa på Häckvägen 12 SaltsjöBoo</p>
+          <div class="stepNumbers">Så här funkar det</div>
+            <!--Step 1-->
+            <div class="stepNumbers">
+              1.
+              <div class="stepText">
+                Lägg allt som du vill ha i varukorgen.
+              </div>
+            </div>
+            <!--Step 2-->
+            <div class="stepNumbers">
+              2.
+              <div class="stepText">
+                Klicka beställ och skriv in information
+              </div>
+              <div class="stepTextNext">
+                 samt när du vill ha din beställning.
+              </div>
+            </div>
+            <!--Step 3-->
+            <div class="stepNumbers">
+              3.
+              <div class="stepText">
+                Vi får ett email som säger vad du
+              </div>
+              <div class="stepTextNext">
+                beställt och vi borjar baka.
+              </div>
+            </div>
+            <!--Step 4-->
+            <div class="stepNumbers">
+              4.
+              <div class="stepText">
+                Du får ett email när du kan komma och
+              </div>
+              <div class="stepTextNext">
+                hämta din beställning (Häckvägen 12).
+              </div>
+            </div>
           <div class="popup">
           <a href="#section2">Beställ</a>
           </div>
@@ -250,6 +287,7 @@
               vaniljsocker och mjölk.
             </p>
             <br>
+            <br>
           </div>
           <div class="card__info">
 
@@ -262,142 +300,6 @@
         </div>
         </div>
 
-        <!-- Card 5 -->
-        <div class="popup">
-        <div class="card" id="item5">
-          <img
-          class="card__image"
-          src="images/A_small_cup_of_coffee.JPG"
-          alt=""
-        />
-          <div class="title">
-            <div class="invis">bryggkaffe</div>
-          </div>
-          <div class="card__content">
-              <div>
-                <label for="antal">Antal:</label>
-                <select name="antal" id="antal">
-                  <option id="1">1</option>
-                  <option id="2">2</option>
-                  <option id="3">3</option>
-                </select>
-              </div>
-              <div class="pris">5:-</div>
-            <h2>Bryggkaffe</h2>
-            <br />
-            <p>Innehåller: Arvid Nordquist kaffepulver och mjölk.</p>
-          </div>
-          <div class="card__info">
-            <button onclick="addToCart(item5)">Beställ</button>
-            <div>
-              <a href="https://www.arvidnordquist.se/kaffe/sortiment/" target="new" class="card__link">Recept</a>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="popup">
-        <div class="card" id="item6">
-          <img
-          class="card__image"
-          src="images/8af1b129-efb9-4ff3-89bd-ff6e8031aba0.jpg"
-          alt=""
-        />
-          <div class="title">
-            <div class="invis">mjölk</div>
-          </div>
-          <div class="card__content">
-            <div>
-              <label for="antal">Antal:</label>
-              <select name="antal" id="antal">
-                <option id="1">1</option>
-                <option id="2">2</option>
-                <option id="3">3</option>
-              </select>
-            </div>
-            <div class="pris">5:-</div>
-            <h2>Mjölk</h2>
-            <br />
-            <p>Innehåller: Mjölk</p>
-            <br>
-          </div>
-          <div class="card__info">
-            <button onclick="addToCart(item6)">Beställ</button>
-            <div>
-              <a href="https://www.arla.se/produkter/arla-ko/farsk-standardmjolk-30pct-1l-609682/" target="new" class="card__link">Recept</a>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="popup">
-        <div class="card" id="item7">
-          <img
-          class="card__image"
-          src="images/jordgubbssaft.jpg"
-          alt=""
-        />
-          <div class="title">
-            <div class="invis">jordgubbssaft</div>
-          </div>
-          <div class="card__content">
-              <div>
-                <label for="antal">Antal:</label>
-                <select name="antal" id="antal">
-                  <option id="1">1</option>
-                  <option id="2">2</option>
-                  <option id="3">3</option>
-                </select>
-              </div>
-              <div class="pris">5:-</div>
-            <h2>Jordgubbssaft</h2>
-            <br />
-            <p>Innehåller: Jordgubbar</p>
-            <br>
-          </div>
-          <div class="card__info">
-            <button onclick="addToCart(item7)">Beställ</button>
-            <div>
-              <a href="https://www.bob.se/products/blandsaft-jordgubb/" target="new" class="card__link">Recept</a>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="popup">
-        <div class="card" id="item8">
-          <img
-          class="card__image"
-          src="images/water-pinkomelet.jpg"
-          alt=""
-        />
-          <div class="title">
-            <div class="invis">vatten</div>
-          </div>
-          <div class="card__content">
-              <div>
-                <label for="antal">Antal:</label>
-                <select name="antal" id="antal">
-                  <option id="1">1</option>
-                  <option id="2">2</option>
-                  <option id="3">3</option>
-                </select>
-              </div>
-              <div class="pris">0:-</div>
-            <h2>Vatten</h2>
-            <br />
-            <p>Innehåller: Vatten</p>
-            <br>
-          </div>
-          <div class="card__info">
-            <button onclick="addToCart(item8)">Beställ</button>
-            <div>
-              <a href="https://www.google.com/search?q=vatten&tbm=isch&ved=2ahUKEwiDkfG1l7f4AhUGqIsKHZJ3D0EQ2-cCegQIABAA&oq=vatten&gs_lcp=CgNpbWcQAzIECCMQJzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIFCAAQgAQyBQgAEIAEMgQIABBDMgQIABBDMgQIABBDMgUIABCABDoGCAAQHhAHOgQIABAYOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BwgAELEDEEM6CggAELEDEIMBEENQoh9Y-iVgoyxoAHAAeACAAS6IAagCkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=WN2tYoOFMYbQrgSS772IBA&bih=961&biw=1920&rlz=1C1CHBF_svSE990SE990" target="new" class="card__link">Recept</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -406,10 +308,9 @@
       <div class="popup">
       <div class="footer-content">
         <h3>OM OSS</h3>
-        <p>Jag och min lillasyster, 12 och 9år har byggt en website där man kan köpa goda bullar och kakor, allt man behöver göra är att swisha så får man ett gmail när man ska komma och hur lång tid sin order kommer ta.</p>
+        <p>Jag och min lillasyster, 12 och 9år har byggt en website där man kan köpa goda bullar och kakor, allt man behöver göra är att swisha så får man ett email när man ska komma och hur lång tid sin order kommer ta.</p>
 
         <ul class="socials">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnqGNMjkdkQmcSKtZmRMXggflDRvvpLKhxzlLRHqPhFDsvClQnXkjGvpDWhvvrfRrFwVKp"><i class="fa fa-google"></i></a></li>
           <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
           <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
