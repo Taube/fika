@@ -59,7 +59,7 @@ app.post("/send", (req, res) => {
   `;
 
   const emailOptions = {
-    from: email ?? fromEmail,
+    from: fromEmail,
     to: toEmail,
     subject: `Ny beställning från ${fullName}`,
     text: text,
