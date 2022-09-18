@@ -94,30 +94,21 @@
             <div class="stepNumbers">
               2.
               <div class="stepText">
-                Klicka beställ och skriv in information
-              </div>
-              <div class="stepTextNext">
-                 samt när du vill ha din beställning.
+                Klicka beställ och skriv in information samt när du vill ha din beställning.
               </div>
             </div>
             <!--Step 3-->
             <div class="stepNumbers">
               3.
               <div class="stepText">
-                Vi får ett email som säger vad du
-              </div>
-              <div class="stepTextNext">
-                beställt och vi borjar baka.
+                Vi får ett email som säger vad du beställt och vi borjar baka.
               </div>
             </div>
             <!--Step 4-->
             <div class="stepNumbers">
               4.
               <div class="stepText">
-                Du får ett email när du kan komma och
-              </div>
-              <div class="stepTextNext">
-                hämta din beställning (Häckvägen 12).
+                Du får ett email när du kan komma och hämta din beställning (Häckvägen 12).
               </div>
             </div>
           <div class="popup">
@@ -343,6 +334,13 @@
           <label name="phone">Telefon</label>
           <input type="text" name="phone" id="phone" />
           <div class="error"></div>
+        </div>
+        <div class="datePicker">
+          <label for="meeting-time">Datum när du vill ha din beställning:</label>
+
+          <input type="datetime-local" id="meeting-time"
+          name="meeting-time" value="2022-09-20T15:00"
+          min="2022-09-20T15:00" max="2022-10-20T15:00">
         </div>
         <div class="input-control">
           <textarea name="order" id="order"></textarea>

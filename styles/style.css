@@ -194,6 +194,10 @@ a {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
+
+  .stepTextNext {
+    margin-left: 0%;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -743,16 +747,15 @@ footer {
   color: #ef812c;
   font-size: 28px;
   font-weight: bold;
+  max-width: 400px;
 }
 
 .stepText {
   display: inline-block;
   color: #333333;
   font-size: 18px;
-}
-
-.stepTextNext {
-  color: #333333;
-  font-size: 18px;
-  margin-left: 32px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }

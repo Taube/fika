@@ -62,6 +62,16 @@
   text-align: right;
 }
 
+label {
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
 .input-control {
   display: flex;
   flex-direction: column;
