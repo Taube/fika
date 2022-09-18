@@ -743,6 +743,7 @@ footer {
   z-index: 3;
 }
 
+.stepNumbersHeading,
 .stepNumbers {
   color: #ef812c;
   font-size: 28px;
@@ -750,11 +751,20 @@ footer {
   max-width: 400px;
 }
 
+.stepNumbersHeading {
+  margin-bottom: 10px;
+}
+
+.stepNumbers {
+  display: grid;
+  grid-template-columns: 32px auto;
+}
+
 .stepText {
   display: inline-block;
   color: #333333;
   font-size: 18px;
-  overflow: hidden;
+  margin-bottom: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

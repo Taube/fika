@@ -5,11 +5,64 @@ function toggleCheckout() {
   populateCheckoutCart();
   updateCheckoutCartText();
   updateCheckoutDisplay();
+  populateDateTime();
 }
 
 function openCheckout() {
   closeCart();
   toggleCheckout();
+}
+
+var days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+function populateDateTime() {
+  var dateField = document.getElementById("date");
+  var time = new Date();
+  var localTimeStr = time.toLocaleString("sv-SE", { timeZone: "UTC" });
+
+  today = new Date(localTimeStr);
+  tomorrow = new Date(today.setDate(today.getDate() + 1))
+    .toISOString()
+    .split("T")[0];
+
+  dateField.value = tomorrow;
+  dateField.min = tomorrow;
+  checkDay();
+}
+
+var timeWeekday = `
+<option value="16.00">16.00</option>
+<option value="17.00">17.00</option>
+<option value="18.00">18.00</option>
+`;
+
+var timeWeekend = `
+<option value="12.00">12.00</option>
+<option value="13.00">13.00</option>
+<option value="14.00">14.00</option>
+<option value="15.00">15.00</option>
+<option value="16.00">16.00</option>
+`;
+
+function checkDay() {
+  var dateField = document.getElementById("date");
+  var timeField = document.getElementById("time");
+  var inputDate = dateField.valueAsDate;
+  var day = days[inputDate.getDay()];
+
+  if (day === "Saturday" || day === "Sunday") {
+    timeField.innerHTML = timeWeekend;
+  } else {
+    timeField.innerHTML = timeWeekday;
+  }
 }
 
 function populateCheckoutCart() {
@@ -207,16 +260,3 @@ window.addEventListener("load", function () {
   phone.addEventListener("blur", () => validatePhone());
   phone.addEventListener("keyup", () => validatePhone());
 });
-
-// this example takes 2 seconds to run
-const start = Date.now();
-
-console.log("starting timer...");
-// expected output: starting timer...
-
-setTimeout(() => {
-  const millis = Date.now() - start;
-
-  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
-  // expected output: seconds elapsed = 2
-}, 2000);

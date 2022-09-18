@@ -81,7 +81,8 @@ label {
   font-size: 0.75rem;
 }
 
-.input-control input {
+.input-control input,
+.input-control select {
   border: 1px solid #bababa;
   border-radius: 0.25rem;
   display: block;

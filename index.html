@@ -82,7 +82,7 @@
           alt="">
         </div>
         <div class="title">
-          <div class="stepNumbers">Så här funkar det</div>
+          <div class="stepNumbersHeading">Så här funkar det</div>
             <!--Step 1-->
             <div class="stepNumbers">
               1.
@@ -240,9 +240,7 @@
             <br>
           </div>
           <div class="card__info">
-
               <button onclick="addToCart(item3)">Beställ</button>
-
             <div>
               <a href="https://www.kokaihop.se/recept/klassisk-kladdkaka-2" target="new" class="card__link">Recept</a>
             </div>
@@ -281,9 +279,7 @@
             <br>
           </div>
           <div class="card__info">
-
               <button onclick="addToCart(item4)">Beställ</button>
-
             <div>
               <a href="https://www.mathem.se/recept/muffins-grundrecept" target="new" class="card__link">Recept</a>
             </div>
@@ -335,12 +331,10 @@
           <input type="text" name="phone" id="phone" />
           <div class="error"></div>
         </div>
-        <div class="datePicker">
-          <label for="meeting-time">Datum när du vill ha din beställning:</label>
-
-          <input type="datetime-local" id="meeting-time"
-          name="meeting-time" value="2022-09-20T15:00"
-          min="2022-09-20T15:00" max="2022-10-20T15:00">
+        <div class="input-control">
+          <label for="date-time">När du vill hämta din beställning:</label>
+          <input type="date" id="date" name="date" onchange="checkDay()" required  />
+          <select id="time" name="time" required></select>
         </div>
         <div class="input-control">
           <textarea name="order" id="order"></textarea>
