@@ -33,8 +33,13 @@ function populateDateTime() {
     .toISOString()
     .split("T")[0];
 
+  maxDay = new Date(today.setDate(today.getDate() + 30))
+    .toISOString()
+    .split("T")[0];
+
   dateField.value = tomorrow;
   dateField.min = tomorrow;
+  dateField.max = maxDay;
   checkDay();
 }
 
