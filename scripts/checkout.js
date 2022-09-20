@@ -29,7 +29,7 @@ function populateDateTime() {
   var localTimeStr = time.toLocaleString("sv-SE", { timeZone: "UTC" });
 
   today = new Date(localTimeStr);
-  tomorrow = new Date(today.setDate(today.getDate() + 1))
+  tomorrow = new Date(today.setDate(today.getDate() + 3))
     .toISOString()
     .split("T")[0];
 
