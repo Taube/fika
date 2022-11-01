@@ -106,7 +106,7 @@ var view = "form";
 const fullName = document.getElementById("fullName");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
-const adress = document.getElementById("adress");
+const address = document.getElementById("address");
 
 const setView = (value) => {
   view = value;
@@ -169,9 +169,9 @@ const validateFormInputs = () => {
   const validName = validateName();
   const validEmail = validateEmail();
   const validPhone = validatePhone();
-  const validAdress = validateAdress();
+  const validAddress = validateAddress();
 
-  const validatedFields = [validName, validEmail, validPhone, validAdress];
+  const validatedFields = [validName, validEmail, validPhone, validAddress];
   const formIsValidCheck = (validatedFields) =>
     validatedFields.every((v) => v === true);
 
@@ -222,15 +222,15 @@ const validatePhone = () => {
   return isValid;
 };
 
-const validateAdress = () => {
+const validateAddress = () => {
   let isValid = false;
   if (!formPosted) return;
 
-  const adressValue = adress.value.trim();
-  if (adressValue === "") {
-    setError(adress, "Vänligen ange adress.");
+  const addressValue = address.value.trim();
+  if (addressValue === "") {
+    setError(address, "Vänligen ange address.");
   } else {
-    setSuccess(adress);
+    setSuccess(address);
     isValid = true;
   }
   return isValid;
@@ -281,6 +281,6 @@ window.addEventListener("load", function () {
   phone.addEventListener("blur", () => validatePhone());
   phone.addEventListener("keyup", () => validatePhone());
 
-  adress.addEventListener("blur", () => validateAdress());
-  adress.addEventListener("keyup", () => validateAdress());
+  address.addEventListener("blur", () => validateAddress());
+  address.addEventListener("keyup", () => validateAddress());
 });

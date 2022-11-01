@@ -47,13 +47,14 @@ app.get("/", (req, res) => {
 
 app.post("/send", (req, res) => {
   const body = req.body;
-  const { fullName, email, phone, order, date, time } = body;
+  const { fullName, email, phone, address, order, date, time } = body;
 
   const text = `
   Ny beställning från:
   Namn: ${fullName}
   E-post: ${email}
   Telefon: ${phone}
+  Address: ${address}
   Datum: ${date}
   Tid: ${time}
   
