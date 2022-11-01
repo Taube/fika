@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinnisMuffins</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/checkout.css" />
     <link
@@ -340,9 +349,7 @@
           <label for="date-time">När du vill ha din beställning:</label>
           <input type="date" id="date" name="date" onchange="checkDay()" required  />
           <select id="time" name="time" required></select>
-        </div>
-        <div class="input-control">   
-          
+        </div>          
         <div class="input-control">
           <textarea name="order" id="order"></textarea>
         </div>
@@ -357,7 +364,7 @@
       <div id="thanks" class="checkout" style="display: none">
         <h1>Tack för din beställning!</h1>
         <div class="input-control">
-          <button onclick="toggleCheckout()">Stäng</button>
+          <button onclick="closeCheckout()">Stäng</button>
         </div>
       </div>
 

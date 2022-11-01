@@ -8,6 +8,14 @@ function toggleCheckout() {
   populateDateTime();
 }
 
+function closeCheckout() {
+  closeCart();
+  setView("closeAll");
+  showCheckout = false;
+  updateOverlayDisplay();
+  updateCheckoutDisplay();
+}
+
 function openCheckout() {
   closeCart();
   toggleCheckout();
@@ -118,13 +126,20 @@ const setView = (value) => {
       break;
 
     case "thanks":
-      console.log("Let's hide form and show thanks page...");
       form.style.display = "none";
       thanks.style.display = "block";
       break;
 
     case "formReset":
       form.style.display = "block";
+      thanks.style.display = "none";
+      form.reset();
+      formIsValid = false;
+      formPosted = false;
+      break;
+
+    case "closeAll":
+      form.style.display = "none";
       thanks.style.display = "none";
       form.reset();
       formIsValid = false;

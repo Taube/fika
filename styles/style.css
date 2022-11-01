@@ -98,15 +98,11 @@ a {
 }
 
 .image {
-  background-image: url(images/cupcakesBackground.jpg);
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 80%;
 }
 
 .content2 .image {
-  background-image: url(images/kladdkaka.png);
   width: 100%;
   height: 75%;
 }

@@ -6,16 +6,21 @@
   height: 100%;
   z-index: 100;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .checkout {
   position: relative;
   z-index: 2;
-  margin: 20vh auto 0 auto;
+  margin: 10vh auto 0 auto;
   width: 20rem;
   padding: 2rem;
   background-color: #f8f2e7;
   border: 1px solid #000;
+  height: 75vh;
+  overflow-y: auto;
 }
 
 .checkout-overlay {
@@ -69,7 +74,7 @@ label {
 
 input,
 label {
-  margin: 0.4rem 0;
+  margin: 0.2rem 0;
 }
 
 .input-control {
