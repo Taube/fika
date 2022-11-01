@@ -21,7 +21,7 @@
       type="text/css"
     />
     <script type="text/javascript" src="scripts/addToCart.js"></script>
-    
+
   </head>
   <body>
     <!-- Header -->
@@ -108,7 +108,7 @@
             <div class="stepNumbers">
               4.
               <div class="stepText">
-                Du får ett email när du kan komma och hämta din beställning (Häckvägen 12).
+                Du får ett email när vi är klara och vi åker och lämnar din beställning vid din dörr och plingar/knackar på.
               </div>
             </div>
           <div class="popup">
@@ -332,10 +332,17 @@
           <div class="error"></div>
         </div>
         <div class="input-control">
-          <label for="date-time">När du vill hämta din beställning:</label>
+          <label name="adress">Adress</label>
+          <input type="text" name="adress" id="adress" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="date-time">När du vill ha din beställning:</label>
           <input type="date" id="date" name="date" onchange="checkDay()" required  />
           <select id="time" name="time" required></select>
         </div>
+        <div class="input-control">   
+          
         <div class="input-control">
           <textarea name="order" id="order"></textarea>
         </div>

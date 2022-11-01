@@ -106,6 +106,7 @@ var view = "form";
 const fullName = document.getElementById("fullName");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
+const adress = document.getElementById("adress");
 
 const setView = (value) => {
   view = value;
@@ -168,8 +169,9 @@ const validateFormInputs = () => {
   const validName = validateName();
   const validEmail = validateEmail();
   const validPhone = validatePhone();
+  const validAdress = validateAdress();
 
-  const validatedFields = [validName, validEmail, validPhone];
+  const validatedFields = [validName, validEmail, validPhone, validAdress];
   const formIsValidCheck = (validatedFields) =>
     validatedFields.every((v) => v === true);
 
@@ -220,6 +222,20 @@ const validatePhone = () => {
   return isValid;
 };
 
+const validateAdress = () => {
+  let isValid = false;
+  if (!formPosted) return;
+
+  const adressValue = adress.value.trim();
+  if (adressValue === "") {
+    setError(adress, "Vänligen ange adress.");
+  } else {
+    setSuccess(adress);
+    isValid = true;
+  }
+  return isValid;
+};
+
 const isValidEmail = (email) => {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -264,4 +280,7 @@ window.addEventListener("load", function () {
 
   phone.addEventListener("blur", () => validatePhone());
   phone.addEventListener("keyup", () => validatePhone());
+
+  adress.addEventListener("blur", () => validateAdress());
+  adress.addEventListener("keyup", () => validateAdress());
 });
