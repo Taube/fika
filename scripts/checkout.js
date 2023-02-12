@@ -299,3 +299,12 @@ window.addEventListener("load", function () {
   address.addEventListener("blur", () => validateAddress());
   address.addEventListener("keyup", () => validateAddress());
 });
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}

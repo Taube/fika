@@ -93,6 +93,7 @@ function cartItemRowButton(product) {
   button.innerText = "Ta bort";
 
   button.setAttribute("onclick", "deleteFromCart('" + product.id + "')");
+  button.className = "taBortKnapp";
   cell.append(button);
   cell.colSpan = 4;
   row.append(cell);
